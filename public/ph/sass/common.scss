@@ -1,0 +1,369 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #666;
+}
+
+html, body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.contanier {
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    height: 100%;
+    //设置容器的最大最小宽度
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 45px;
+        background-color: #006699;
+
+        display: flex;
+
+        a {
+            flex-basis: 45px;
+            height: 100%;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 45px;
+        }
+
+        .title {
+            flex: 1;
+            text-align: center;
+            line-height: 45px;
+            color: white;
+            font-size: 18px;
+            // font-weight: bold;
+        }
+    }
+
+    .loading{
+        position: absolute;
+        height: 100%;
+        top: 125px;
+        background-color: white;
+        width: 100%;
+        z-index: 50;
+        display: none;
+
+        .box{
+            border: 2px solid #87cefa;
+            width: 50px;
+            height: 50px;
+            margin: 160px auto;
+            transform: none;
+
+            animation: rotate 1s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    main{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+
+        .category {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 15px;
+
+            a {
+                width: 33.3333333%;
+            }
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+
+            .product {
+                width: 50%;
+                padding: 10px;
+
+                a {
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    border: 1px solid #ccc;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    .intro {
+                        text-align: center;
+                    }
+
+                    .price {
+                        .nowprice {
+                            color: red;
+                        }
+
+                        .oldprice {
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .searchbar {
+            height: 50px;
+            display: flex;
+            // border: 1px solid #000;
+            align-items: center;
+            padding: 0px 10px;
+
+            input {
+                flex: 1;
+                border: 1px solid #007aff;
+                margin: 0;
+                outline: none;
+                height: 33px;
+                border-right: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0; 
+                font-size: 14px;
+            }
+
+            button {
+                height: 33px;
+                flex-basis: 50px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        .searchhistory {
+            margin-top: 10px;
+            padding: 0px 10px;
+            .top {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                span {
+                    font-size: 14px;
+                }
+            }
+
+            .content {
+                width: 100%;
+                li {
+                    width: 100%;
+                    height: 30px;
+                    border: 1px dashed red;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: -1px;
+
+                    font-size: 12px;
+                    padding-left: 5px;
+                }                
+            }
+        }
+
+        .sort {
+            display: flex;
+            height: 30px;
+            background-color: #ddd;
+            a {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                font-size: 12px;
+
+                &.active{
+                    span{
+                        color: orange;
+                    }
+                }
+            }
+        }
+
+        //分类页面的主体部分css
+        .lt-category {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+
+            .left{
+                flex-basis: 130px;
+                height: 100%;
+                // border: 3px solid #000;
+                position: relative;
+
+                li {
+                    height: 50px;
+                    border: 1px solid #ccc;
+                    line-height: 50px;
+                    padding-left: 20px;
+                    margin-top: -1px;
+                    border-left: none;
+
+                    &.active {
+                        background-color: #eeeeee;
+                    }
+                }
+            }
+
+            .right {
+                flex: 1;
+                height: 100%;
+                // border: 3px solid #000;
+                position: relative;
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    li {
+                        width: 33.33333333%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        //注册页面的表单
+        .registform {
+            padding: 20px;
+
+            form {
+                input {
+                    border: 1px solid #007acc;
+                }
+    
+                div.code {
+                    display: flex;
+    
+                    button {
+                        flex: 2;
+                        margin-left: 10px;
+                        height: 40px;
+
+                        &.disabled {
+                            background: #ccc;
+                            border: none;
+                            color: red;
+                        }
+                    }
+    
+                    input {
+                        flex: 5;
+                    }
+                }
+
+                div.regist {
+                    display: flex;
+                    button {
+                        flex: 1;
+                        height: 40px;
+                    }
+                }
+            }
+
+            .items {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 0px;
+                p {
+                    display: flex;
+                    align-items: center;
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        margin: 0;
+                        margin-left: 5px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        //个人中心页面的css
+        .user {
+            .logout {
+                padding: 20px 10px;
+                button {
+                    width: 100%;
+                }
+
+
+            }
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #006699;
+        z-index: 100;
+
+
+        display: flex;
+
+        a {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+            span {
+                color: white;
+            }
+
+            .title {
+                font-size: 12px;
+            }
+
+            &.active {
+                span {
+                    color: orange;
+                }
+            }
+        }
+    }
+}

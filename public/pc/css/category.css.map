@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGY,4BAAO;EACH,UAAU,EAAE,IAAI;;AAChB,gEAAO;EACH,UAAU,EAAE,MAAM;EAClB,cAAc,EAAE,MAAM",
+"sources": ["../sass/category.scss"],
+"names": [],
+"file": "category.css"
+}

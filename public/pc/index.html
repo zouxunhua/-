@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!--进度条的css-->
+    <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!--表单验证插件的css-->
+    <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
+    <!--自已写的css-->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <!--模板引擎-->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!--bootstrap-->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!--分页器-->
+    <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+    <!--表单验证插件-->
+    <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <!--图表插件-->
+    <script src="lib/echarts/echarts.min.js"></script>
+    <!--上传文件的插件-->
+    <script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
+    <script src="lib/jquery-fileupload/jquery.iframe-transport.js"></script>
+    <script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <!--进度条插件-->
+    <script src="lib/nprogress/nprogress.js"></script>
+    <!--自已写的js-->
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <!-- 标题 -->
+            <h3 class="title">ITCAST</h3>
+
+            <!-- 头像 -->
+            <div class="icon">
+                <img src="./images/default.png" alt="">
+                <p>超级管理员</p>
+            </div>  
+            
+            <!-- 菜单 -->
+            <ul class="menu">
+                <li>
+                    <a href="user.html" class="active"><span class="glyphicon glyphicon-user"></span>用户管理</a>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="togglesubmenu"><span class="glyphicon glyphicon-list"></span>分类管理</a>
+
+                    <div class="submenu">
+                        <a href="./category.html">一级分类</a>
+                        <a href="./subcategory.html">二级分类</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="./product.html"><span class="glyphicon glyphicon-tags"></span>商品管理</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="topbar">
+                <a href="javascript:void();" class="toggle-left pull-left"><span class="glyphicon glyphicon-align-justify"></span></a>
+                <a href="javascript:void();" class="log-out pull-right"><span class="glyphicon glyphicon-log-out"></span></a>
+            </div>
+
+            <ol class="breadcrumb">
+                <li><a href="#">管理系统</a></li>
+                <li><a href="#">首页</a></li>
+            </ol>
+
+            <div class="charts container-fluid">
+                <div class="bar col-sm-6"></div>
+                <div class="pipe col-sm-6"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 是否退出的模态框 -->
+    <div id="logout-modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p><span class="glyphicon glyphicon-info-sign"></span>您确定要退出后台管理系统吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <!-- 执行echart方法，生成表格 -->
+    <script src="./js/index.js"></script>
+</body>
+</html>

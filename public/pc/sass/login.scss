@@ -1,0 +1,25 @@
+body {
+    background-color: #222d32;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.login-modal {
+    height: 100%;
+    width: 100%;
+
+    .panel {
+        .panel-title {
+            text-align: center;
+            font-size: 18px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        margin: 100px auto;
+        width: 350px;
+    }
+}

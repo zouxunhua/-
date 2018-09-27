@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./js/common.js"></script>
+
+    <!-- <script src="./js/searchlist.js"></script> -->
+    <script src="./js/searchlist2.js"></script>
+</head>
+<body>
+    <div class="contanier">
+        <header>
+            <a class="left mui-icon mui-icon-back"></a>
+            <p class="title">乐淘云购</p>
+            <a href="./search.html" class="right fa fa-search"></a>
+        </header>
+        <main>
+                <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+
+            <div class="searchbar">
+                <input type="text" placeholder="请输入搜索关键字">
+                <button type="button" class="searchbutton mui-btn mui-btn-primary">搜索</button>
+            </div>
+
+            <div class="sort">
+                <a class="active"><span>上架时间</span><span class="fa fa-angle-down"></span></a>
+                <a data-type="num"><span>库存</span><span class="fa fa-angle-down"></span></a>
+                <a data-type="price"><span>价格</span><span class="fa fa-angle-down"></span></a>
+                <a><span>折扣</span><span class="fa fa-angle-down"></span></a>
+            </div>
+
+            <div class="products">
+
+            </div>
+
+            </div>
+            </div>
+        </main>
+
+        <div class="loading">
+            <div class="box"></div>
+        </div>
+
+        <script type="text/html" id="products">
+
+            {{each data}}
+            <div class="product">
+                <a>
+                    <img src="{{$value.pic[0].picAddr}}" alt=""> 
+                    <p class="intro mui-ellipsis-2">{{$value.proName}}</p>
+                    <p class="price">
+                        <span class="nowprice">￥{{$value.price}}</span>
+                        <span class="oldprice">￥{{$value.oldPrice}}</span>
+                    </p>
+                    <button type="button" data-id="{{$value.id}}" class="buybutton mui-btn mui-btn-primary">立即购买</button>   
+                </a>
+            </div>
+            {{/each}}
+        </script>
+
+        <script type="text/html" id="searchkeywords">
+            {{each keywords}}
+            <li><span class="keyword">{{$value}}</span>
+                <span class="mui-icon mui-icon-closeempty"></span></li>
+            {{/each}}
+        </script>
+
+        <footer>
+            <a href="./index.html" class="active">
+                <span class="icon fa fa-home"></span>
+                <span class="title">首页</span>
+            </a>
+            <a href="./category.html">
+                <span class="icon fa fa-bars"></span>
+                <span class="title">分类</span>
+            </a>
+            <a href="./car.html">
+                <span class="icon fa fa-shopping-cart"></span>
+                <span class="title">购物车</span>
+            </a>
+            <a href="./user.html">
+                <span class="icon fa fa-user"></span>
+                <span class="title">我的</span>
+            </a>
+        </footer>
+    </div>
+
+    <script>
+        //实现页面的内部滚动
+        mui('.mui-scroll-wrapper').scroll({
+            deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+        });
+
+        //获得slider插件对象
+        var gallery = mui('.mui-slider');
+        gallery.slider({
+            interval:1000//自动轮播周期，若为0则不自动播放，默认为0；
+        });
+    </script>
+</body>
+</html>

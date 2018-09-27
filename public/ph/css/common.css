@@ -1,0 +1,300 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #666;
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.contanier {
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.contanier header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #006699;
+  display: flex;
+}
+.contanier header a {
+  flex-basis: 45px;
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  line-height: 45px;
+}
+.contanier header .title {
+  flex: 1;
+  text-align: center;
+  line-height: 45px;
+  color: white;
+  font-size: 18px;
+}
+.contanier .loading {
+  position: absolute;
+  height: 100%;
+  top: 125px;
+  background-color: white;
+  width: 100%;
+  z-index: 50;
+  display: none;
+}
+.contanier .loading .box {
+  border: 2px solid #87cefa;
+  width: 50px;
+  height: 50px;
+  margin: 160px auto;
+  transform: none;
+  animation: rotate 1s ease-in-out infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.contanier main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.contanier main .category {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+.contanier main .category a {
+  width: 33.3333333%;
+}
+.contanier main .products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contanier main .products .product {
+  width: 50%;
+  padding: 10px;
+}
+.contanier main .products .product a {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  justify-content: space-around;
+  align-items: center;
+}
+.contanier main .products .product a .intro {
+  text-align: center;
+}
+.contanier main .products .product a .price .nowprice {
+  color: red;
+}
+.contanier main .products .product a .price .oldprice {
+  text-decoration: line-through;
+}
+.contanier main .searchbar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+.contanier main .searchbar input {
+  flex: 1;
+  border: 1px solid #007aff;
+  margin: 0;
+  outline: none;
+  height: 33px;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 14px;
+}
+.contanier main .searchbar button {
+  height: 33px;
+  flex-basis: 50px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.contanier main .searchhistory {
+  margin-top: 10px;
+  padding: 0px 10px;
+}
+.contanier main .searchhistory .top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.contanier main .searchhistory .top span {
+  font-size: 14px;
+}
+.contanier main .searchhistory .content {
+  width: 100%;
+}
+.contanier main .searchhistory .content li {
+  width: 100%;
+  height: 30px;
+  border: 1px dashed red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -1px;
+  font-size: 12px;
+  padding-left: 5px;
+}
+.contanier main .sort {
+  display: flex;
+  height: 30px;
+  background-color: #ddd;
+}
+.contanier main .sort a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 12px;
+}
+.contanier main .sort a.active span {
+  color: orange;
+}
+.contanier main .lt-category {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.contanier main .lt-category .left {
+  flex-basis: 130px;
+  height: 100%;
+  position: relative;
+}
+.contanier main .lt-category .left li {
+  height: 50px;
+  border: 1px solid #ccc;
+  line-height: 50px;
+  padding-left: 20px;
+  margin-top: -1px;
+  border-left: none;
+}
+.contanier main .lt-category .left li.active {
+  background-color: #eeeeee;
+}
+.contanier main .lt-category .right {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+.contanier main .lt-category .right ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contanier main .lt-category .right ul li {
+  width: 33.33333333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contanier main .registform {
+  padding: 20px;
+}
+.contanier main .registform form input {
+  border: 1px solid #007acc;
+}
+.contanier main .registform form div.code {
+  display: flex;
+}
+.contanier main .registform form div.code button {
+  flex: 2;
+  margin-left: 10px;
+  height: 40px;
+}
+.contanier main .registform form div.code button.disabled {
+  background: #ccc;
+  border: none;
+  color: red;
+}
+.contanier main .registform form div.code input {
+  flex: 5;
+}
+.contanier main .registform form div.regist {
+  display: flex;
+}
+.contanier main .registform form div.regist button {
+  flex: 1;
+  height: 40px;
+}
+.contanier main .registform .items {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.contanier main .registform .items p {
+  display: flex;
+  align-items: center;
+}
+.contanier main .registform .items p a {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  margin-left: 5px;
+  font-size: 12px;
+}
+.contanier main .user .logout {
+  padding: 20px 10px;
+}
+.contanier main .user .logout button {
+  width: 100%;
+}
+.contanier footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #006699;
+  z-index: 100;
+  display: flex;
+}
+.contanier footer a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.contanier footer a span {
+  color: white;
+}
+.contanier footer a .title {
+  font-size: 12px;
+}
+.contanier footer a.active span {
+  color: orange;
+}
+
+/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #666;
+}
+
+html, body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.contanier {
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 100px;
+    height: 100%;
+    //设置容器的最大最小宽度
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 45px;
+        background-color: #006699;
+
+        display: flex;
+
+        a {
+            flex-basis: 45px;
+            height: 100%;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 45px;
+        }
+
+        .title {
+            flex: 1;
+            text-align: center;
+            line-height: 45px;
+            color: white;
+            font-size: 18px;
+            // font-weight: bold;
+        }
+    }
+
+    .loading{
+        position: absolute;
+        height: 100%;
+        top: 125px;
+        background-color: white;
+        width: 100%;
+        z-index: 50;
+        display: none;
+
+        .box{
+            border: 2px solid #87cefa;
+            width: 50px;
+            height: 50px;
+            margin: 160px auto;
+            transform: none;
+
+            animation: rotate 1s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    main{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        padding-bottom: 50px;
+
+        .detail {
+            a {
+                border-bottom: 1px solid #ccc;
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                color: #888;
+                text-decoration: none;
+            }
+
+            .proName {
+                font-size: 16px;
+                color: black;
+                font-weight: bold;
+            }
+
+            .price {
+                .oldPrice {
+                    color: red;
+                    text-decoration: line-through;
+                }
+            }
+
+            .size {
+                flex-wrap: wrap;
+                span {
+                    background-color: #ddd;
+                    border: 1px solid #bbb;
+                    border-radius: 3px;
+                    padding: 5px;
+                    margin: 3px 3px;
+
+                    &.active {
+                        background-color: #006699;
+                        color: white;
+                    }
+                }
+            }
+
+            .num {
+                .left {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .buybar {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #ccc;
+        z-index: 100;
+
+        button {
+            margin: 10px;
+        }
+
+        a {
+            margin: 13px;
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #006699;
+        z-index: 100;
+
+
+        display: flex;
+
+        a {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+            span {
+                color: white;
+            }
+
+            .title {
+                font-size: 12px;
+            }
+
+            &.active {
+                span {
+                    color: orange;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+#addproduct-modal .file-group {
+  height: 30px;
+  position: relative;
+}
+#addproduct-modal .file-group input[type="file"] {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  height: 30px;
+}
+#addproduct-modal .file-group button[type="button"] {
+  position: absolute;
+}
+#addproduct-modal .imgbox {
+  display: flex;
+}
+#addproduct-modal .imgbox img {
+  margin: 10px;
+  height: 80px;
+}
+
+/*# sourceMappingURL=product.css.map */

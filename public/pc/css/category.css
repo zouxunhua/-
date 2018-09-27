@@ -1,0 +1,9 @@
+.main .right .content .table {
+  margin-top: 20px;
+}
+.main .right .content .table th, .main .right .content .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=category.css.map */

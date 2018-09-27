@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+  //对象： 无序的键值对的集合。 {name:value, name1:value1}
+
+  //js中，对象的特征：动态性
+  //对象：存储数据， 存储的是一个具体的事物的一些属性。
+  //数组：存储的数据一般同一类型的数据。
+  var obj = {
+    name:"zs",
+    age:18
+  }
+
+
+
+  //var name = "age";
+
+  //1. 点语法的特点：与变量无关  找的永远是对象的属性
+  //console.log(obj.name);// .就是的意思   obj的name属性
+  //obj.gender = "男";
+  //console.log(obj);
+
+  //2. []语法， 关联数组的语法，  把对象当成数组来看待，
+  //数组的下标是数值类型，， 对象的下标是字符串类型的。
+  //console.log(obj.name);
+  //console.log(obj["name"]);
+  //var name = "age";
+  //console.log(obj[name]);
+  //name = "name";
+  //console.log(obj[name]);
+
+
+  //如果使用的点语法， 跟变量无关，直接找到的就是属性
+  //如果一个对象的属性存在与变量中，我们需要用[]语法。
+
+
+
+  //如何遍历一个对象
+//  var obj = {
+//    name:"zs",
+//    age:18,
+//    gender:"男"
+//  }
+//
+//  for(var k in obj){
+//    //console.log(obj.k);//因为k是一个变量，如果用.语法，obj.k表示obj的k属性
+//    console.log(obj[k]);
+//  }
+
+
+  var fnName = "fn"+new Date().valueOf();//fn1123123213
+  window.fnName = function(){}// 相当于  funtion fnName(){}
+  window[fnName] = function(){}// 相当于 function fn12123123(){}
+
+
+</script>
+
+</body>
+</html>

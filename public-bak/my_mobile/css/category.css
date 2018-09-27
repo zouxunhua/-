@@ -1,0 +1,42 @@
+.lt-content .lt-main {
+  display: flex; }
+  .lt-content .lt-main .left {
+    position: relative;
+    flex-basis: 120px;
+    height: 100%; }
+    .lt-content .lt-main .left div {
+      width: 100%; }
+      .lt-content .lt-main .left div ul {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap; }
+        .lt-content .lt-main .left div ul li {
+          width: 100%;
+          height: 50px;
+          margin-bottom: -1px; }
+          .lt-content .lt-main .left div ul li a {
+            display: block;
+            color: #666;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 60px;
+            border: 1px solid #666; }
+  .lt-content .lt-main .right {
+    position: relative;
+    flex: 1;
+    height: 100%; }
+    .lt-content .lt-main .right ul {
+      display: flex;
+      flex-wrap: wrap; }
+      .lt-content .lt-main .right ul li {
+        width: 50%; }
+        .lt-content .lt-main .right ul li a {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around; }
+          .lt-content .lt-main .right ul li a p {
+            color: #666; }
+
+/*# sourceMappingURL=category.css.map */

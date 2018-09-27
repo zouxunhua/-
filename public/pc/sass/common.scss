@@ -1,0 +1,156 @@
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+.main {
+    position: relative;
+    height: 100%;
+    padding-left: 180px;
+
+    transition: all 1s;
+
+    &.now {
+        padding-left: 0px;
+    }
+
+    .left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 180px;
+        height: 100%;
+        background-color: #222d32;
+        transition: all 1s;
+
+        //left如果拥有 now这个类
+        &.now {
+            left: -180px;
+        }
+
+        .title {
+            height: 50px;
+            width: 100%;
+            background-color: #367fa9;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .icon {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+            }
+
+            p {
+                color: white;
+                font-size: 16px;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+        }
+
+        .menu {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            .active {
+                background-color: #1d1f21;
+                border-left: 3px solid #105988;
+            }
+
+            a {
+                padding-left: 30px;
+
+                color: white;
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                line-height: 40px;
+
+                border: 3px solid transparent;
+                box-sizing: border-box;
+
+                span {
+                    margin-right: 10px;
+                }
+            }
+
+            .submenu {
+                display: none;
+
+                a {
+                    padding-left: 50px;
+                }
+            } 
+        }
+    }
+
+    .right {
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+
+        .table {
+            margin-top: 20px;
+            th, td {
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+
+
+        .topbar {
+            height: 50px;
+            width: 100%;
+            background-color: #3c8dbc;
+
+            a {
+                line-height: 50px;
+                margin: 0 20px;
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+            }
+        }
+
+        .breadcrumb {
+            margin: 20px;
+        }
+    }
+}
+
+#logout-modal {
+
+    // width: 200px;
+
+    .modal-body {
+        p {
+            color: #800;
+        }
+    }
+}

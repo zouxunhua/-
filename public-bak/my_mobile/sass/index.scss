@@ -1,0 +1,48 @@
+.lt-content {
+    .lt-main {
+        .lt-home-category {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+
+            a {
+                width: 33.3333333333%;
+            }
+        }
+
+        .lt-home-goods {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 50%;
+                padding: 10px;
+                a {
+                    height: 100%;
+                    padding: 5px;
+                    width: 100%;
+                    border: 1px solid #ccc;
+                    display: block;
+
+                    .price {
+                        text-align: center;
+                        
+                        .new {
+                            font-size: 12px;
+                        }
+
+                        .old {
+                            font-size: 12px;
+                            text-decoration: line-through;
+                            color: red;
+                        }
+                    }
+
+                    .button {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

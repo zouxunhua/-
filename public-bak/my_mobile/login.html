@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="lt-content">
+        <div class="lt-nav">
+            <a href="" class="acenter left fa fa-home wcolor"></a>
+            <h4 class="wcolor title">乐淘云购</h4>
+            <a href="" class="acenter right fa fa-search wcolor"></a>
+        </div>
+        <div class="lt-main">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                        <form class="mui-input-group">
+                                <div class="mui-input-row">
+                                    <label>用户名</label>
+                                <input type="text" name="username" autocomplete="false" class="mui-input-clear" placeholder="请输入用户名">
+                                </div>
+                                <div class="mui-input-row">
+                                    <label>密码</label>
+                                    <input type="password" name="password" class="mui-input-password" placeholder="请输入密码">
+                                </div>
+                                <div class="mui-button-row">
+                                    <button type="button" class="mui-btn mui-btn-primary reset" >重置</button>
+                                    <button type="button" class="mui-btn mui-btn-primary login" >登录</button>
+                                </div>
+                            </form>
+                </div>
+            </div>
+        </div>
+        <ul class="lt-footer">
+            <li><a class="now" href=""><span class="icon fa fa-home"></span><span class="title">首页</span></a></li>
+            <li><a href=""><span class="icon fa fa-bars"></span><span class="title">分类</span></a></li>
+            <li><a href=""><span class="icon fa fa-shopping-cart"></span><span class="title">购物车</span></a></li>
+            <li><a href=""><span class="icon fa fa-user"></span><span class="title">会员中心</span></a></li>
+        </ul>
+    </div>
+
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>
+
+<script>
+    mui('.mui-scroll-wrapper').scroll({
+	deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+});
+</script>

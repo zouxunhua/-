@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+  //只想获取数组的一部分，并且不想改变原数组，使用它。
+  //var arr = [11,22,33,44,55,66];
+  //截取数组的1,2项，不包含2
+  //var newArr = arr.slice(1,2)
+  //console.log(newArr);
+  //console.log(arr);
+
+
+  //splice :拼接
+  //1. 可以删除任意位置的数组的元素。
+  //2. 可以在任意位置添加元素
+
+  var arr = [11, 22, 33, 44, 55, 66];
+
+  //从哪个下标开始，删除几个元素
+  var newArr = arr.splice(4, 0, 99);
+
+  console.log(newArr);
+
+  console.log(arr);
+</script>
+
+</body>
+</html>

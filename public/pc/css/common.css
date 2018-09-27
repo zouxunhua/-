@@ -1,0 +1,128 @@
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+.main {
+  position: relative;
+  height: 100%;
+  padding-left: 180px;
+  transition: all 1s;
+}
+.main.now {
+  padding-left: 0px;
+}
+.main .left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  background-color: #222d32;
+  transition: all 1s;
+}
+.main .left.now {
+  left: -180px;
+}
+.main .left .title {
+  height: 50px;
+  width: 100%;
+  background-color: #367fa9;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+  line-height: 50px;
+  text-align: center;
+}
+.main .left .icon {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .left .icon img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.main .left .icon p {
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.main .left .menu {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.main .left .menu .active {
+  background-color: #1d1f21;
+  border-left: 3px solid #105988;
+}
+.main .left .menu a {
+  padding-left: 30px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  line-height: 40px;
+  border: 3px solid transparent;
+  box-sizing: border-box;
+}
+.main .left .menu a span {
+  margin-right: 10px;
+}
+.main .left .menu .submenu {
+  display: none;
+}
+.main .left .menu .submenu a {
+  padding-left: 50px;
+}
+.main .right {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.main .right .table {
+  margin-top: 20px;
+}
+.main .right .table th, .main .right .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.main .right .topbar {
+  height: 50px;
+  width: 100%;
+  background-color: #3c8dbc;
+}
+.main .right .topbar a {
+  line-height: 50px;
+  margin: 0 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.main .right .breadcrumb {
+  margin: 20px;
+}
+
+#logout-modal .modal-body p {
+  color: #800;
+}
+
+/*# sourceMappingURL=common.css.map */

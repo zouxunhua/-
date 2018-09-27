@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="lt-content">
+        <div class="lt-nav">
+            <a href="" class="acenter left fa fa-home wcolor"></a>
+            <h4 class="wcolor title">乐淘云购</h4>
+            <a href="" class="acenter right fa fa-search wcolor"></a>
+        </div>
+        <div class="lt-main">
+                <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll lt-search">
+                            <div class="searchbar">
+                                <input id="searchinput" type="text" placeholder="请输入搜索关键字">
+                                <button type="button" class="mui-btn mui-btn-primary search-button">搜索</button>
+                            </div>
+
+                            <div class="lt-sort">
+                                <a href="javascript:;">上架时间<span class="fa fa-angle-down"></span></a>
+                                <a data-type="price" href="javascript:;">价格<span  class="fa fa-angle-down"></span></a>
+                                <a data-type="num" href="javascript:;">库存<span  class="fa fa-angle-down"></span></a>
+                                <a href="javascript:;">折扣<span  class="fa fa-angle-down"></span></a>
+                            </div>
+
+                            <ul class="lt-home-goods">
+                                    <li>
+                                        <a href="">
+                                            <img src="./images/product.jpg" alt="" class="pic">
+                                            <p class="des mui-ellipsis-2">DEERUPT RUNNER 经典鞋DEERUPT RUNNER 经典鞋DEERUPT RUNNER 经典鞋DEERUPT RUNNER 经典鞋DEERUPT RUNNER 经典鞋</p>
+                                            <p class="price">
+                                                <span class="new">￥560</span>
+                                                <span class="old">￥480</span>
+                                            </p>
+                                            <p class="button">
+                                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+        </div>
+        <ul class="lt-footer">
+            <li><a class="now" href=""><span class="icon fa fa-home"></span><span class="title">首页</span></a></li>
+            <li><a href=""><span class="icon fa fa-bars"></span><span class="title">分类</span></a></li>
+            <li><a href=""><span class="icon fa fa-shopping-cart"></span><span class="title">购物车</span></a></li>
+            <li><a href=""><span class="icon fa fa-user"></span><span class="title">会员中心</span></a></li>
+        </ul>
+    </div>
+
+    <script type="text/html" id="goodlist">
+        {{each data v i}}
+        <li>
+                <a href="">
+                    <img src={{v.pic[0].picAddr}} alt="" class="pic">
+                    <p class="des mui-ellipsis-2">{{v.proName}}</p>
+                    <p class="price">
+                        <span class="new">￥{{v.price}}</span>
+                        <span class="old">{{v.oldPrice}}</span>
+                    </p>
+                    <p class="button">
+                        <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                    </p>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- <script src="./js/search.js"></script> -->
+    <script src="./js/goodlist.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+</body>
+</html>
+
+<script>
+    mui('.mui-scroll-wrapper').scroll({
+	deceleration: 0.0005, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+    indicators: false
+});
+</script>

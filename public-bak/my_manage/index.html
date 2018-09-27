@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+
+    <!-- 1. 导入文件 -->
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/bootstrap-validator/css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="./my_css/common.css">
+    <link rel="stylesheet" href="./assets/nprogress/nprogress.css">
+
+</head>
+<body class="index-body">
+    <aside class="aside pull-left">
+        <div class="brand">
+            <a href="">ITCAST</a>
+        </div>
+        <div class="user">
+            <img src="./images/default.png" class= "img-circle img-responsive" alt="">
+            <span>超级管理员</span>
+        </div>
+        <ul class="menu">
+            <ul>
+                <li><a class="active"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+                <li>
+                    <a href="javascript:void(0)"><span class="glyphicon glyphicon-list"></span>分类管理</a>
+                    <div class="child" style="display: none">
+                        <a href="javascript:void(0)">一级分类</a>
+                        <a href="javascript:void(0)">二级分类</a>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-tags"></span>商品管理</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main">
+        <div class="topbar">
+            <a href="javascript:void(0)" data-menu class="glyphicon glyphicon-align-justify pull-left"></a>
+            <a href="javascript:void(0)" data-logout class="glyphicon glyphicon-log-out pull-right"></a>
+        </div>
+        <div class="nav">
+            <ol class="breadcrumb">
+                <li><a href="#">管理系统</a></li>
+                <li><a href="#">首页</a></li>
+              </ol>
+        </div>
+        <div class="container-fluid content">
+            <div class="map bar col-lg-6"></div>
+            <div class="map pipe col-lg-6"></div>
+        </div>
+    </main>
+
+    <div id="logoutmodel" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-danger">您确定要退出后台管理系统吗?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="logout-confirm">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="./assets/nprogress/nprogress.js"></script>
+    <script src="./my_js/index.js"></script>
+    <script src="./my_js/common.js"></script>
+    <script src="./assets/echarts/echarts.min.js"></script>
+    <script src="./assets/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+</body>
+</html>
+
+
+

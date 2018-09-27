@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<!--
+  自定义属性：
+    规定：自定义属性都要通过data-开头
+    //给dom对象新增加了一个属性  dataset:会把所有的data-开头的属性都存储起来
+-->
+
+<div id="box" title="呵呵" data-id="129" class="demo" data-aa="bb" data-cc="dd"></div>
+
+<script>
+
+  var box = document.getElementById("box");
+
+  //attr方法和prop方法
+  //prop用来操作布尔类型的属性  attr用来操作属性
+
+  //id title   aa = "bb"
+
+
+  //attr 内部实现使用 getAttribute和setAttribute来实现  attr是用来操作标签的属性
+  //$box.attr("id")  box.getAttribute("id")
+
+
+  //prop:内部是用对象来实现      $box.prop("id")  box.id
+
+  //checked  selected disabled
+  //  prop("checked" , true)
+
+
+
+
+
+  //console.log(box.dataset.aa);
+  //console.log(box.dataset.cc);
+  //console.log(box.id);//id属性
+  //console.log(box.dataset.id);//data-id属性
+
+
+
+  //console.log(box.id);
+  //console.log(box.getAttribute("id"));
+//  console.log(box.aa);
+//  console.log(box.getAttribute("aa"));
+  //console.log(box.className);
+  //console.log(box.getAttribute("className"));
+
+</script>
+
+</body>
+</html>

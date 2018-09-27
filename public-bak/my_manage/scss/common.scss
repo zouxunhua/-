@@ -1,0 +1,201 @@
+.mt_150 {
+    margin-top: 150px;
+}
+
+.btn-margin {
+    margin-top: -15px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.dropdown-margin {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.width_100 {
+    width: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a, a:hover, a:link, a:focus, a:active {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* 登录页 */
+.login-body {
+    background-color: #222d32;
+}
+
+
+/* 首页 */
+.index-body {
+    .aside {
+        width: 180px;
+        height: 100%;
+        background-color: #222d32;
+        position: absolute;
+        left: 0;
+        z-index: 100;
+        transition: all 1s;
+        
+
+        &.now {
+            transition: all 1s;
+            left: -180px;
+        }
+
+        .brand {
+            height: 50px;
+            background-color: #367fa9;
+            a {
+                display: block;
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 50px;
+                width: 100%;
+                height: 50px;
+                color: white;
+                text-align: center;
+            }
+
+        }
+
+        .user {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+
+            img {
+                width: 50px;
+                margin-right: 10px;
+            }
+
+            span {
+                color: white;
+            }
+        }
+
+        .menu {
+            li {
+                width: 100%;
+                
+                a {
+                    display: block;
+                    width: 100%;
+                    border: 3px solid transparent;
+                    padding-left: 40px;
+                    color: #aaa;
+                    height: 40px;
+                    line-height: 40px;
+
+                    span {
+                        color: #aaa;
+                        margin-right: 10px;
+                    }
+
+                    &.active {
+                        border-left: 3px solid #3879d9;
+                        color: white;
+                        background: black;
+                    }
+                }
+
+                .child {
+                    a {
+                        padding-left: 60px;
+                    }
+                    
+                    a.active {
+                        border-left: none;
+                        color: white;
+                        background: black;
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding-left: 180px;
+        // float: right;
+        transition: all 1s;
+
+        &.now {
+            padding-left: 0px;
+        }
+
+        .topbar {
+            width: 100%;
+            height: 50px;
+            background-color: #3c8dbc;
+            padding: 0px 20px;
+            
+            a {
+                line-height: 50px;
+                color: white;
+                font-size: 20px;
+            }
+        }
+
+        .nav {
+            padding: 20px;
+        }
+
+        .content {
+            .map {
+                // border: 1px solid #000;
+                height: 400px;
+            }
+        }
+
+        .table {
+            th, td {
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    #logoutmodel {
+        margin-top: 200px;
+    }
+
+    .modal {
+        .fileselect {
+            position: relative;
+
+            &:hover button {
+                color: #333;
+                background-color: #e6e6e6;
+                border-color: #ababab;
+            }
+
+            #fileupload {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+        }
+
+
+    }
+}

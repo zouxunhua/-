@@ -1,0 +1,25 @@
+#addproduct-modal {
+    .file-group {
+        height: 30px;
+        position: relative;
+        input[type="file"] {
+            position: absolute;
+            z-index: 10;
+            opacity: 0;
+            height: 30px;
+        }
+
+        button[type="button"] {
+            position: absolute;
+        }
+    }
+
+    .imgbox {
+        display: flex;
+
+        img {
+            margin: 10px;
+            height: 80px;
+        }
+    }
+}
